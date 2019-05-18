@@ -7,27 +7,26 @@ require(["config"], () => {
          this. banner () ;
         }
 
-        banner () {
-          // 首页轮播图
+        banner(){
           var mySwiper = new Swiper ('.swiper-container', {
-            autoplay: true,
-            
-            loop: true, // 循环模式选项
-            // 如果需要分页器
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true
-            },
-            
-            // 如果需要前进后退按钮
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev'
+              direction: 'horizontal', // 水平切换选项
+              loop: true, // 循环模式选项
+              autoplay:true,
               
-            }
-  
+              // 如果需要分页器
+              pagination: {
+                el: '.swiper-pagination',
+              }
           }) 
-        }
+          //鼠标覆盖停止自动切换
+          mySwiper.el.onmouseover = function(){
+              mySwiper.autoplay.stop();
+          }
+          mySwiper.el.onmouseleave = function(){
+              mySwiper.autoplay.start();
+          }
+      }
+
         //
         getType(){
           $.get(url.rapBaseUrl+"index/type", data=>{
