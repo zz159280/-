@@ -8,6 +8,7 @@ require(["config"],()=>{
            this.getli();
            this.hjia();
            this.zj();
+           this.yx();
          }
    
          init () {
@@ -38,7 +39,6 @@ require(["config"],()=>{
                   inputNum=tr.querySelector(".inputNum")
                   jia.onclick=(e)=>{
                     this.hjia();
-                    this.zj();
                     let cart = localStorage.getItem('cart');
                     if(cart) {
                       cart = JSON.parse(cart);
@@ -55,6 +55,8 @@ require(["config"],()=>{
                         
                       }
                     }
+                 this.zj();
+
                   }
             })
         }
@@ -67,7 +69,6 @@ require(["config"],()=>{
                 inputNum=tr.querySelector(".inputNum")
                 jian.onclick=(e)=>{
                   this.hjia();
-                  this.zj();
                   let cart = localStorage.getItem('cart');
                   if(cart) {
                     cart = JSON.parse(cart);
@@ -85,12 +86,17 @@ require(["config"],()=>{
                       }else{
                         inputNum.value =Number(inputNum.value) -1
                       }
+                  this.zj();
+
       
                       
                     }
+                  this.zj();
+
                   }
                 }
           })
+         
       }
       hjia(){
         let li=$(".shop-list")
@@ -120,15 +126,30 @@ require(["config"],()=>{
             })
           }
           zj(){
-            this.hjia();
             let li=$(".shop-list");
             let zj=$("#zj");
+            
             let zh=0;
-             Array.from(li).forEach(tr=>{
-              let   dj=tr.querySelector("#dj");
+             Array.from($(".shop-list")).forEach(tr=>{
+              let   dj=tr.querySelector("#xj");
+              console.log(dj)
                     zh=zh+Number(dj.innerHTML); 
                 })
                 zj.html(zh);
+                console.log(zh)
+          }
+          yx(){
+           let zs=$("#zs"),
+               i=0 
+           ;
+           
+           let li=$(".shop-list")
+           
+         
+           Array.from(li).forEach(tr=>{
+             i+=1;
+           })
+           zs.html(i);
           }
        }
        new Cart();

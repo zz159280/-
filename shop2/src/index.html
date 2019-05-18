@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>首页-天涯明月刀周边商城</title>
+  <link rel="stylesheet" href="libs/swiper/css/swiper.css">
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -15,22 +16,51 @@
   <!----------中--------->
   <main>
     <!-----轮播图---------->
-    <!-- 轮播图 -->
-		<div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="/img/20190513094335_762406.jpg"></div>
-        <div class="swiper-slide"><img src="/img/20190505095805_810074.jpg"></div>
-        <div class="swiper-slide"><img src="/img/20181214200602_791291.jpg"></div>
-        <div class="swiper-slide"><img src="/img/20180904183037_889558.jpg"></div>
-      </div>
-      <!--分页器 -->
-      <div class="swiper-pagination"></div>
-      <!-- 前后切换按钮 -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+    <!-- <div class="Rotation-chart">
+       <ul>
+         <li class="ac"><a href="javascript:;"><img src="/img/20190313110922_806251.jpg"></a></li>
+         <li><a href="javascript:;"><img src=""></a></li>
+         <li><a href="javascript:;"><img src=""></a></li>
+         <li><a href="javascript:;"><img src=""></a></li>
+         <li><a href="javascript:;"><img src=""></a></li>
+       </ul>
+       <ol>
+         <li class="bc"><a href="javascript:;"></a></li>
+         <li class=""><a href="javascript:;"></a></li>
+         <li class=""><a href="javascript:;"></a></li>
+         <li class=""><a href="javascript:;"></a></li>
+         <li class=""><a href="javascript:;"></a></li>
+       </ol>
+  </div> -->
+  <!-- 轮播图 -->
+  <div class="swiper-container banner">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <a href="/html/list.html">
+                <img src="/img/20180904183037_889558.jpg" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="/html/list.html">
+                <img src="/img/20190513094335_762406.jpg" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="/html/list.html">
+                <img src="/img/20181214200602_791291.jpg" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="/html/list.html">
+              <img src="/img/20190505095805_810074.jpg" alt="">
+          </a>
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
   </div>
   <!-----内容部分------->
-   <div class="index-main">
+  <div class="index-main">
     <!------分类服装------>
     <!----服装导航-->
    
@@ -89,7 +119,7 @@
                     <div class="rylb">
                     </div>
    </div>
-  </main>
+</main>
   <!----------尾-------->
   <div id="footer-container"></div>
   <script type="text/html" id="list-monopoly">
