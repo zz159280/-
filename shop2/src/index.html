@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页-天涯明月刀周边商城</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <!------头------->
+  <div id="header-container">
+  
+  </div>
+  <!----------中--------->
+  <main>
+    <!-----轮播图---------->
+    <!-- 轮播图 -->
+		<div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/img/20190513094335_762406.jpg"></div>
+        <div class="swiper-slide"><img src="/img/20190505095805_810074.jpg"></div>
+        <div class="swiper-slide"><img src="/img/20181214200602_791291.jpg"></div>
+        <div class="swiper-slide"><img src="/img/20180904183037_889558.jpg"></div>
+      </div>
+      <!--分页器 -->
+      <div class="swiper-pagination"></div>
+      <!-- 前后切换按钮 -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+  </div>
+  <!-----内容部分------->
+   <div class="index-main">
+    <!------分类服装------>
+    <!----服装导航-->
+   
+    <div class="Clothing">
+      <h5>服装服饰</h5>
+      <p>八荒齐聚，谁才是真正的武林萌主</p>
+      <a href="/html/list.html" target="_blank">更多</a>
+   </div>
+   <!-------进入服装默认页面---->
+     <div class="fztu">
+       <a href="/html/list.html" target="_blank"><img src="/img/t17.png"></a>
+      </div>
+       <!----服装列表页面-->
+       <div class="fzlb">
+       </div>
+        <!------分类毛绒玩具------>
+   <!----毛绒玩具导航-->
+   <div class="Plush-toys">
+       <h5>毛绒玩具</h5>
+       <p> 软萌八荒弟子等你带回家</p>
+       <a href="/html/list.html" target="_blank">更多</a>
+    </div>
+   <!-------进入毛绒玩具默认页面---->
+  <div class="mrwj">
+     <a href="/html/list.html" target="_blank"><img src="/img/t20.png"></a>
+    </div>
+     <!---毛绒玩具列表例表面-->
+     <div class="mrlb">
+     </div>
+     <!-------数码3c--------->
+   <!----数码3c导航-->
+   <div class="Digital-3C">
+       <h5>数码3c</h5>
+       <p> 天下数码萌会</p>
+       <a href="/html/list.html" target="_blank">更多</a>
+    </div>
+   <!-------进入数码3c默认页面---->
+  <div class="sm3c">
+     <a href="/html/list.html" target="_blank"><img src="/img/t19.png"></a>
+    </div>
+     <!---数码3c列表页面-->
+     <div class="smlb">
+     </div>
+             <!------分类通用日常------>
+   <!----通用日常导航-->
+    <div class="Daily-expenses">
+       <h5>通用日常</h5>
+       <p> 软萌八荒弟子等你带回家</p>
+       <a href="/html/list.html" target="_blank">更多</a>
+    </div>
+<!-------进入通用日常默认页面---->
+                     <div class="ry">
+                         <a href="/html/list.html" target="_blank"><img src="/img/t20.png"></a>
+                     </div>
+                   <!---通用日常列表例表面-->
+                    <div class="rylb">
+                    </div>
+   </div>
+  </main>
+  <!----------尾-------->
+  <div id="footer-container"></div>
+  <script type="text/html" id="list-monopoly">
+    {{each list item}}
+    <dl>
+      <a href="/html/detail.html?id={{item.id}}" target="_blank">
+          <dt><img src="{{item.image}}"></dt>
+            <dd>
+             <p>{{item.title}}</p>
+             <span>￥{{item.price}}</span>
+          </dd>
+      </a>
+    </dl>
+    {{/each}}
+  </script>
+  <script src="/libs/requirejs/require.min.js" data-main="/js/index"></script>
+</body>
+</html>

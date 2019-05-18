@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的购物车页-天涯明月刀周边商城</title>
+    <link rel="stylesheet" href="/css/cart.css">
+</head>
+<body>
+     <div id="header-container"></div>
+     <main>
+         <div class="cart-main">
+             <!-----导航介绍----->
+             <div class="cart-nav">
+                    <span>商品信息</span>
+                    <span>单价（元）</span>
+                    <span>数量</span>
+                    <span>金额（元）</span>
+                    <span>操作</span>
+             </div>
+             <!-----全选--->
+             <div class="All-election">
+                <input type="checkbox" class="checkAll" checked="checked">
+                <p>天涯明月刀供应商：魔匠文化</p>
+             </div>
+             <!--单选--->
+             <div class="Single-election">
+                    <ul id="list-container">
+                            <!-- list容器 -->
+                    </ul>        
+                            <script type="text/html" id="cart-template">
+                                {{each cart item}}
+                            <li class="shop-list" data-id="{{item.id}}">
+                                    <input type="checkbox" checked="checked" class="check">
+                                    <a href="/html/detail.html?id={{item.id}}" target="_blank"><img src="{{item.images[0]}}"></a>
+                                    <a href="/html/detail.html?id={{item.id}}" target="_blank">{{item.title}}</a>
+                                    <div class="info">
+                                       规格：{{item.title}}
+                                    </div>
+                                    <div class="price">
+                                          <span>￥{{item.price}}</span>
+                                          <span>￥<i id="dj">{{item.price}}</i></span>
+                                    </div>
+                                    <div class="num">
+                                        <span class="reduceNum">-</span>
+                                        <input type="text" value="{{item.num}}" class="inputNum">
+                                        <span class="addNum">+</span>
+                                    </div>
+                                    <div class="money"><span id="xj"></span> 元</div>
+                                    <div class="operate">
+                                        <span class="delete">删除</span>
+                                        <span class="collect">移入收藏</span>
+                                    </div>
+                                </li>
+                                {{/each}}
+                            </script>
+             </div>
+             <div class="footer">
+
+                    <a href="javascript:;">去结算</a>
+                 <div>
+                 <p>已选商品<span id="zs"> 1</span> 总价：<span id="zj">00.00 </span>元</p>
+                 <p>不含运费和其他优惠</p>
+                </div>
+               
+                
+             </div>
+         </div>
+
+     </main>
+     <div id="footer-container"></div>
+    <script src="/libs/requirejs/require.min.js" data-main="/js/cart"></script>   
+</body>
+</html>

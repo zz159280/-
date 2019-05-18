@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>详情页-天涯明月刀周边商城</title>
+    <link rel="stylesheet" href="/css/detail.css">
+</head>
+<body>
+      <!------头------->
+  <div id="header-container"></div>
+  <!-------中间内容---------->
+  <main>
+      <div class="nav1">
+          <p><a href="/index.html">商城首页</a>> <a href="/html/list.html">列表</a>> <a href="/html/detail.html">详情</a></p>
+      </div>
+      <!------detail容器----->
+      <div class="detail" id="detail">
+
+      </div>
+      <!---渲染页面-->
+      <script type="text/html" id="detail-template">
+          <div class="picture">
+             <div class="view_bd">
+                <img class="zoom-img" src="{{data.images[0]}}" data-zoom-image="{{data.images[0]}}"/>
+             </div>
+                <div class="view_thumbs" id="gal1">
+                    <ul class="view-ul">
+                        <li class="current">
+                            <a href="#" data-image="{{data.images[0]}}" data-zoom-image="{{data.images[0]}}">
+                                <img class="s" src="{{data.images[0]}}" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-image="{{data.images[1]}}" data-zoom-image="{{data.images[1]}}">
+                            <img class="s" src="{{data.images[1]}}" /></a>
+                        </li>
+                        <li>
+                            <a href="#" data-image="{{data.images[2]}}" data-zoom-image="{{data.images[2]}}">
+                            <img class="s" src="{{data.images[2]}}" /></a>
+                        </li>
+                        <li>
+                            <a href="#" data-image="{{data.images[3]}}" data-zoom-image="{{data.images[3]}}">
+                            <img class="s" src="{{data.images[3]}}" /></a>
+                        </li>
+                    </ul>
+                
+                </div>
+            </div>
+            <div class="description">
+                <h5>{{data.title}}</h5>
+                <div>
+                    <p>
+                        <span>￥{{data.price}}</span>
+                        <i>￥{{data.price}}</i>
+                    </p>
+                </div>
+                <div>
+                    <div>
+                        已售：<span class="saleNum">{{data.number}}</span>
+                    </div>
+                    <div>
+                        累计评价：<span class="comments">{{data.number1}}</span>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        尺码：<span class="border">均码</span>
+                    </div>
+                    <div>
+                        数量:
+                        <div>
+
+                            <span id="reduce">-</span>
+                            <input type="text" value="1" id="inputNum">
+                            <span id="add">+</span>
+                        </div>
+                        <span>（库存充足）</span>
+                    </div>
+                </div>
+                <div>
+                    <div id="buy-now" data-id="">加入购物车</div>
+                    <div id="add-car" >立即购买</div>
+                   
+                </div>
+            </div>
+      </script>
+  </main>
+   <!----------尾-------->
+   <div id="footer-container"></div>
+  
+   <script src="/libs/requirejs/require.min.js" data-main="/js/detail"></script>
+</body>
+</html>
