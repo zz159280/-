@@ -1,47 +1,67 @@
 @import"module/header.scss";
 @import"module/footer.scss";
-*{margin: 0;padding: 0;}
-a{text-decoration: none}
-ul,ol{list-style: none;}
-main{
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+main {
     width: 100%;
     background: #f5f5f5;
     min-width: 1280px;
     overflow: hidden;
-    .cart-main{
+
+    .cart-main {
         width: 1280px;
         margin: 0 auto;
-        margin-top:84px; 
-        
-        .cart-nav{
+        margin-top: 84px;
+
+        .cart-nav {
             width: 1280px;
             height: 57px;
             background: #ffffff;
             line-height: 57px;
             color: #666666;
             font-size: 16px;
-            span:nth-child(1){
+
+            span:nth-child(1) {
                 margin-left: 230px;
             }
-            span:nth-child(2){
+
+            span:nth-child(2) {
                 margin-left: 375px;
             }
-            span:nth-child(3){
+
+            span:nth-child(3) {
                 margin-left: 110px;
             }
-            span:nth-child(4){
+
+            span:nth-child(4) {
                 margin-left: 120px;
             }
-            span:nth-child(5){
-                margin-left:65px;
+
+            span:nth-child(5) {
+                margin-left: 65px;
             }
         }
-        .All-election{
+
+        .All-election {
             width: 1280px;
             height: 68px;
             display: flex;
             align-items: center;
-            input{
+
+            input {
                 width: 28px;
                 height: 28px;
                 background: #ff5556;
@@ -51,130 +71,151 @@ main{
                 margin: 0px 34px;
             }
         }
-        .Single-election{
+
+        .Single-election {
             width: 1280px;
-            #list-container{
-                .shop-list{
+
+            #list-container {
+                .shop-list {
                     font-size: 12px;
                     background: #ffffff;
                     height: 173px;
                     width: 1280px;
                     margin-bottom: 10px;
                     display: flex;
-                align-items: center;
-                    .check{
+                    align-items: center;
+
+                    .check {
                         width: 28px;
-                    height: 28px;
-                    background: #ff5556;
-                    color: #ffffff;
-                    border: none;
-                    outline: none;
-                    margin: 0px 34px;
+                        height: 28px;
+                        background: #ff5556;
+                        color: #ffffff;
+                        border: none;
+                        outline: none;
+                        margin: 0px 34px;
                     }
-                    a:nth-child(2){
-                        img{
+
+                    a:nth-child(2) {
+                        img {
                             width: 115px;
                             height: 115px;
                             border: 1px solid #dddddd;
                         }
                     }
-                    a:nth-child(3){
+
+                    a:nth-child(3) {
                         margin-left: 35px;
                         margin-right: 188px;
                     }
-                    .info{
+
+                    .info {
                         width: 158px !important;
                     }
-                   .price{
-                       display: flex;
-                       flex-direction: column;
-                       margin-right: 80px;
-                       span:nth-child(1){
-                           color: #999999;
-                           text-decoration: line-through;
 
-                       }
-                   }
-                   .num{
-                       width: 112px;
-                       height: 32px;
-                       border: 1px solid #dddddd;
-                       display: flex;
-                       margin-right: 80px;
-                       .reduceNum{
-                           width: 31px;
-                           height: 32px;
-                           display: inline-block;
-                           text-align: center;
-                           color: #666666;
-                           font-size: 16px;
-                           line-height: 32px;
-                           cursor: pointer;
-                       }
-                       .inputNum{
-                          width: 55px;
-                          height: 32px;
-                          outline: none;
-                        border-top:none; 
-                        border-bottom:none; 
-                          border-left:1px solid #dddddd;
-                          border-right:1px solid #dddddd;  
-                          text-align: center;
-                          
-                       }
-                       .addNum{
-                        width: 31px;
+                    .price {
+                        display: flex;
+                        flex-direction: column;
+                        margin-right: 80px;
+
+                        span:nth-child(1) {
+                            color: #999999;
+                            text-decoration: line-through;
+
+                        }
+                    }
+
+                    .num {
+                        width: 112px;
                         height: 32px;
-                        display: inline-block;
-                        text-align: center;
-                        color: #666666;
-                        font-size: 16px;
-                        line-height: 32px;
-                        cursor: pointer;
-                       }
-                   }
-                   .money{
-                       width: 152px;
-                   }
-                   .operate{
-                       display: flex;
-                       flex-direction: column;
-                       line-height: 22px;
-                       span{
-                        cursor: pointer;
-                       }
-                   }
+                        border: 1px solid #dddddd;
+                        display: flex;
+                        margin-right: 80px;
+
+                        .reduceNum {
+                            width: 31px;
+                            height: 32px;
+                            display: inline-block;
+                            text-align: center;
+                            color: #666666;
+                            font-size: 16px;
+                            line-height: 32px;
+                            cursor: pointer;
+                        }
+
+                        .inputNum {
+                            width: 55px;
+                            height: 32px;
+                            outline: none;
+                            border-top: none;
+                            border-bottom: none;
+                            border-left: 1px solid #dddddd;
+                            border-right: 1px solid #dddddd;
+                            text-align: center;
+
+                        }
+
+                        .addNum {
+                            width: 31px;
+                            height: 32px;
+                            display: inline-block;
+                            text-align: center;
+                            color: #666666;
+                            font-size: 16px;
+                            line-height: 32px;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .money {
+                        width: 152px;
+                    }
+
+                    .operate {
+                        display: flex;
+                        flex-direction: column;
+                        line-height: 22px;
+
+                        span {
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
         }
-        .footer{
+
+        .footer {
             width: 1280px;
             height: 73px;
             background: #ffffff;
-           div{
-               width: 220px;
-               height: 73px;
-               float:right;
-               margin-right: 30px;
-               text-align: right;
-               font-size: 12px;
-               p:nth-child(1){
-                   padding-top: 13px;
-               span{
-                 color: #f74a4a;
-                 font-size: 18px;
-                 font-weight: 600;
-                
-               }
+
+            div {
+                width: 220px;
+                height: 73px;
+                float: right;
+                margin-right: 30px;
+                text-align: right;
+                font-size: 12px;
+
+                p:nth-child(1) {
+                    padding-top: 13px;
+
+                    span {
+                        color: #f74a4a;
+                        font-size: 18px;
+                        font-weight: 600;
+
+                    }
+                }
+
+                p:nth-child(2) {
+                    color: #999999;
+                    font-size: 12px;
+                    padding-top: 11px;
+
+                }
             }
-               p:nth-child(2){
-                   color: #999999;
-                   font-size: 12px;
-                   padding-top: 11px;
-                   
-               }
-           }
-            a{
+
+            a {
                 width: 152px;
                 height: 73px;
                 background: #ff5556;
@@ -182,8 +223,8 @@ main{
                 text-align: center;
                 line-height: 73px;
                 display: block;
-                float:right; 
-                
+                float: right;
+
             }
         }
     }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,25 @@
     <title>详情页-天涯明月刀周边商城</title>
     <link rel="stylesheet" href="/css/detail.css">
 </head>
-<body>
-      <!------头------->
-  <div id="header-container"></div>
-  <!-------中间内容---------->
-  <main>
-      <div class="nav1">
-          <p><a href="/index.html">商城首页</a>> <a href="/html/list.html">列表</a>> <a href="/html/detail.html">详情</a></p>
-      </div>
-      <!------detail容器----->
-      <div class="detail" id="detail">
 
-      </div>
-      <!---渲染页面-->
-      <script type="text/html" id="detail-template">
-          <div class="picture">
-             <div class="view_bd">
-                <img class="zoom-img" src="{{data.images[0]}}" data-zoom-image="{{data.images[0]}}"/>
-             </div>
+<body>
+    <!------头------->
+    <div id="header-container"></div>
+    <!-------中间内容---------->
+    <main>
+        <div class="nav1">
+            <p><a href="/index.html">商城首页</a>> <a href="/html/list.html">列表</a>> <a href="/html/detail.html">详情</a></p>
+        </div>
+        <!------detail容器----->
+        <div class="detail" id="detail">
+
+        </div>
+        <!---渲染页面-->
+        <script type="text/html" id="detail-template">
+            <div class="picture">
+                <div class="view_bd">
+                    <img class="zoom-img" src="{{data.images[0]}}" data-zoom-image="{{data.images[0]}}" />
+                </div>
                 <div class="view_thumbs" id="gal1">
                     <ul class="view-ul">
                         <li class="current">
@@ -34,18 +36,18 @@
                         </li>
                         <li>
                             <a href="#" data-image="{{data.images[1]}}" data-zoom-image="{{data.images[1]}}">
-                            <img class="s" src="{{data.images[1]}}" /></a>
+                                <img class="s" src="{{data.images[1]}}" /></a>
                         </li>
                         <li>
                             <a href="#" data-image="{{data.images[2]}}" data-zoom-image="{{data.images[2]}}">
-                            <img class="s" src="{{data.images[2]}}" /></a>
+                                <img class="s" src="{{data.images[2]}}" /></a>
                         </li>
                         <li>
                             <a href="#" data-image="{{data.images[3]}}" data-zoom-image="{{data.images[3]}}">
-                            <img class="s" src="{{data.images[3]}}" /></a>
+                                <img class="s" src="{{data.images[3]}}" /></a>
                         </li>
                     </ul>
-                
+
                 </div>
             </div>
             <div class="description">
@@ -81,15 +83,16 @@
                 </div>
                 <div>
                     <div id="buy-now" data-id="">加入购物车</div>
-                    <div id="add-car" >立即购买</div>
-                   
+                    <div id="add-car">立即购买</div>
+
                 </div>
             </div>
-      </script>
-  </main>
-   <!----------尾-------->
-   <div id="footer-container"></div>
-  
-   <script src="/libs/requirejs/require.min.js" data-main="/js/detail"></script>
+        </script>
+    </main>
+    <!----------尾-------->
+    <div id="footer-container"></div>
+
+    <script src="/libs/requirejs/require.min.js" data-main="/js/detail"></script>
 </body>
+
 </html>
